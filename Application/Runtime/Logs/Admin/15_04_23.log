@@ -1,0 +1,12 @@
+[ 2015-04-23T09:32:35+08:00 ] ::1 /zhao/Admin/admin-table.html
+ERR: 无法加载控制器:Admin-table
+
+[ 2015-04-23T09:32:58+08:00 ] ::1 /zhao/Admin/User/admin-help.html
+ERR: 非法操作:admin-help
+
+[ 2015-04-23T09:33:02+08:00 ] ::1 /zhao/Admin/User/admin-table.html
+ERR: 非法操作:admin-table
+
+[ 2015-04-23T09:33:31+08:00 ] ::1 /zhao/Admin/User/admin-table.html
+ERR: 非法操作:admin-table
+

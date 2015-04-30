@@ -9,13 +9,13 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="Cache-Control" content="no-siteapp" />
   <link rel="alternate icon" type="image/png" href="/zhao/Public/assets/i/icon.png">
-  <link rel="stylesheet" href="/zhao/Public/assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.3.0/css/amazeui.min.css">
 </head>
 <body>
 <!-- Header -->
 <header data-am-widget="header" class="am-header am-header-default">
   <div class="am-header-left am-header-nav">
-    <a href="#left-link" class="">
+    <a href="<?php echo U('Index/index');?>" class="">
       <i class="am-header-icon am-icon-home"></i>
     </a>
   </div>
@@ -33,21 +33,21 @@
 		</div>
 		<div class="am-modal-bd">
 		
-		  <form class="am-form am-form-horizontal">
+		   <form action="<?php echo U('User/doLogin');?>" method="post" class="am-form am-form-horizontal">
 		  <fieldset>
 		  <div class="am-form-group am-form-icon">
 			<i class="am-icon-user"></i>
-			<input type="text" class="am-form-field" placeholder="手机/邮箱/用户名">
+			<input type="text" name="username" class="am-form-field" placeholder="手机/邮箱" required>
 		  </div>
 
 		 <div class="am-form-group am-form-icon">
 			<i class="am-icon-lock"></i>
-			<input type="password" class="am-form-field" placeholder="密码">
+			<input type="password" name="password" class="am-form-field" placeholder="密码" required>
 		  </div>
 
-		    <label class="am-fl "><input type="checkbox" >下次自动登录</label>
+		    <!-- <label class="am-fl "><input type="checkbox" >下次自动登录</label> -->
 			
-			<a class="am-btn am-btn-link am-btn-sm am-fr">忘记密码 ^_^?</a>
+			<a href="<?php echo U('User/forget');?>" class="am-btn am-btn-link am-btn-sm am-fr">忘记密码?</a>
 		
 			
 		  <button type="submit" class="am-btn am-btn-primary am-btn-block">登录</button>
@@ -74,7 +74,7 @@
 	  
     </div>
 	 <div class="am-u-sm-3">
-	 	<span style="display:none; line-height:40px; color:red; font-size:14px;">请填写正确的手机邮箱</span>
+	 	<span id="span1"></span>
 	 </div>
   </div>
 
@@ -83,28 +83,29 @@
     <div class="am-u-sm-6">
       <input type="password" id="password" name="password" placeholder="密码" required>
     </div>
-	<div class="am-u-sm-4">
+	<div class="am-u-sm-3">
+		<span id="span2"></span>
 	 </div>
   </div>
   
 	 <div class="am-form-group">
     <label for="mobile_code" class="am-u-sm-3 am-form-label">验证码</label>
     <div class="am-u-sm-3">
-      <input type="password" name="mobile_code" id="mobile_code" placeholder="验证码" required>
+      <input type="text" name="mobile_code" id="mobile_code" placeholder="验证码" required>
     </div>
 	<div class="am-u-sm-3">
 	<input type="button" id="zphone"  style="display:none;"  class="am-btn  am-btn-block"  value="免费获取激活短信">
 		<img id="email" src="<?php echo U('User/code');?>"   onclick="this.src=this.src + '?' + Math.random()" alt="点击刷新">
 	 </div>
-	 <div class="am-u-sm-4">
-
+	 <div class="am-u-sm-3">
+		<span id="span3"></span>
 	 </div>
   </div>
   <div class="am-form-group">
     <div class="am-u-sm-offset-3 am-u-sm-9">
       <div class="checkbox">
         <label>
-          <input type="checkbox" required> 我已阅读并接受<a href="#">《用户协议》</a>
+          <input type="checkbox" required> 我已阅读并接受<a href="<?php echo U('User/agree');?>" target="_blank">《用户协议》</a>
         </label>
       </div>
     </div>
@@ -118,8 +119,7 @@
 </form>
   </div>
   <div class="am-u-sm-3">
- <img class="am-circle" src="http://7jpqbr.com1.z0.glb.clouddn.com/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80" width="140" height="140"/>
-</p>
+ 	<img class="am-circle" src="http://7jpqbr.com1.z0.glb.clouddn.com/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80" width="140" height="140"/>
   </div>
 </div>
 <br>
@@ -134,33 +134,79 @@
 
 <script>
 	$(function(){
-		
+		check_mobile();
+		check_password();
+		check_code();
+	});
+	function check_mobile(){
 		telreg=/^1((3|5|8){1}\d{1}|70)\d{8}$/;
 		emailreg=/^[a-z]([a-z0-9]*[-_]?[a-z0-9]+)*@([a-z0-9]*[-_]?[a-z0-9]+)+[\.][a-z]{2,3}([\.][a-z]{2})?$/i;
+		$("#mobile").bind("focus",function(){
+			$("#span1").html("请填写手机/邮箱").css("vertical-align","middle");
+		});
 		$("#mobile").bind("blur",function(){
 			$mobile=$(this).val();
 		    if(emailreg.test($mobile)){    
 				$("#zphone").css("display","none");
 				$("#email").css("display","block");
 				$("#reg_form").attr("action","<?php echo U('User/doEmailRegister');?>");
+				$.post('<?php echo U('User/chk');?>', {mobile:$mobile}, function(data) {
+						if(data){
+							$("#span1").html('<i class="am-icon-minus-square">邮箱已注册</i>').css("vertical-align","middle");
+						}else{
+							$("#span1").html('<i class="am-icon-check-square"></i>').css("vertical-align","middle");
+						}
+			    });
+				
 			}else if(telreg.test($mobile)){
 				$("#zphone").css("display","block");
 				$("#email").css("display","none");
 				$("#reg_form").attr("action","<?php echo U('User/doTelRegister');?>");
+				$.post('<?php echo U('User/chk');?>', {mobile:$mobile}, function(data) {
+					if(data){
+						$("#span1").html('<i class="am-icon-minus-square">手机已注册</i>').css("vertical-align","middle");
+					}else{
+						$("#span1").html('<i class="am-icon-check-square"></i>').css("vertical-align","middle");
+					}
+		       });
 			}else{
-				$("span").css("display","block");
+				$("#span1").html('<i class="am-icon-minus-square">请填写手机/邮箱</i>').css("vertical-align","middle");
 			}
 		});
-	});
+	}
+	
+	function check_password(){
+		reg=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{6,14}$/;
+		$("#password").bind("focus",function(){
+			$("#span2").html("长度6~16位,必须由数字和大小写字母组成").css("vertical-align","middle");
+		});
+		$("#password").bind("blur",function(){
+			$password=$(this).val();
+		    if(reg.test($password)){    
+				$("#span2").html('<i class="am-icon-check-square"></i>').css("vertical-align","middle");
+			}else{
+				$("#span2").html('<i class="am-icon-minus-square">长度6~16位,必须由数字和大小写字母组成</i>').css("vertical-align","middle");
+			}
+		});
+	}
+	
+	
+
+
+	
+	
 	$("#zphone").click(function(){  
 		 get_mobile_code();
 	});  
 
 	function get_mobile_code(){
-	  $.post('<?php echo U('User/test');?>', {mobile:jQuery.trim($('#mobile').val())}, function(msg) {
-				RemainTime();
-	  });
-	};
+		  $.post('<?php echo U('User/test');?>', {mobile:jQuery.trim($('#mobile').val())}, function(msg) {
+			  if(msg=='提交成功'){
+					RemainTime();
+				}
+		  });
+		};
+	
 	var iTime = 59;
 	var Account;
 	function RemainTime(){
@@ -190,7 +236,7 @@
 			sTime='没有倒计时';
 		}
 		document.getElementById('zphone').value = sTime;
-	}		 
+	}	
 </script>
 </body>
 </html>

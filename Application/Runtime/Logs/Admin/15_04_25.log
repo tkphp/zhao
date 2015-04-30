@@ -1,0 +1,75 @@
+[ 2015-04-25T09:11:44+08:00 ] ::1 /zhao/Admin/admin-log.html
+ERR: 无法加载控制器:Admin-log
+
+[ 2015-04-25T09:35:38+08:00 ] ::1 /zhao/Admin/Index/admin-table.html
+ERR: 非法操作:admin-table
+
+[ 2015-04-25T09:36:40+08:00 ] ::1 /zhao/Admin/Index/admin-gallery.html
+ERR: 非法操作:admin-gallery
+
+[ 2015-04-25T09:36:45+08:00 ] ::1 /zhao/Admin/Index/admin-table.html
+ERR: 非法操作:admin-table
+
+[ 2015-04-25T09:43:17+08:00 ] ::1 /zhao/Admin/Goods/assets/css/amazeui.min.css
+ERR: 非法操作:assets
+
+[ 2015-04-25T09:43:17+08:00 ] ::1 /zhao/Admin/Goods/assets/js/jquery.min.js
+ERR: 非法操作:assets
+
+[ 2015-04-25T09:43:17+08:00 ] ::1 /zhao/Admin/Goods/assets/js/amazeui.min.js
+ERR: 非法操作:assets
+
+[ 2015-04-25T09:43:17+08:00 ] ::1 /zhao/Admin/Goods/assets/css/admin.css
+ERR: 非法操作:assets
+
+[ 2015-04-25T09:43:17+08:00 ] ::1 /zhao/Admin/Goods/assets/js/app.js
+ERR: 非法操作:assets
+
+[ 2015-04-25T09:43:24+08:00 ] ::1 /zhao/Admin/Goods/assets/css/admin.css
+ERR: 非法操作:assets
+
+[ 2015-04-25T09:43:24+08:00 ] ::1 /zhao/Admin/Goods/assets/js/app.js
+ERR: 非法操作:assets
+
+[ 2015-04-25T09:43:24+08:00 ] ::1 /zhao/Admin/Goods/assets/js/jquery.min.js
+ERR: 非法操作:assets
+
+[ 2015-04-25T09:43:24+08:00 ] ::1 /zhao/Admin/Goods/assets/js/amazeui.min.js
+ERR: 非法操作:assets
+
+[ 2015-04-25T09:43:24+08:00 ] ::1 /zhao/Admin/Goods/assets/css/amazeui.min.css
+ERR: 非法操作:assets
+
+[ 2015-04-25T11:43:31+08:00 ] ::1 /zhao/Admin/User/login.htm
+ERR: 非法操作:login.htm
+
+[ 2015-04-25T11:50:07+08:00 ] ::1 /zhao/Admin/Goods/add
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'zhao.zh_cat' doesn't exist
+
+[ 2015-04-25T11:51:48+08:00 ] ::1 /zhao/Admin/Goods/add
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'zhao.zh_cat' doesn't exist
+
+[ 2015-04-25T11:52:32+08:00 ] ::1 /zhao/Admin/Goods/add
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'zhao.zh_cat' doesn't exist
+
+[ 2015-04-25T11:52:33+08:00 ] ::1 /zhao/Admin/Goods/add
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'zhao.zh_cat' doesn't exist
+
+[ 2015-04-25T11:52:34+08:00 ] ::1 /zhao/Admin/Goods/add
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'zhao.zh_cat' doesn't exist
+
+[ 2015-04-25T11:52:34+08:00 ] ::1 /zhao/Admin/Goods/add
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'zhao.zh_cat' doesn't exist
+
+[ 2015-04-25T11:52:35+08:00 ] ::1 /zhao/Admin/Goods/add
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'zhao.zh_cat' doesn't exist
+
+[ 2015-04-25T14:10:01+08:00 ] ::1 /zhao/Admin/Goods/edit/id/6.html
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'zhao.zh_products' doesn't exist
+
+[ 2015-04-25T14:41:39+08:00 ] ::1 /zhao/Admin/Goods/doAdd.html
+ERR: 不存在的图像文件
+
+[ 2015-04-25T15:34:16+08:00 ] ::1 /zhao/Admin/Goods/doAdd.html
+ERR: 不存在的图像文件
+

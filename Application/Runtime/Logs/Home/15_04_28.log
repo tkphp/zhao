@@ -1,0 +1,71 @@
+[ 2015-04-28T09:41:41+08:00 ] ::1 /zhao/Home/User/chk.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003948s ]
+SQL: SHOW COLUMNS FROM `zh_user` [ RunTime:0.0352s ]
+SQL: SELECT * FROM `zh_user` WHERE ( email = 'zb18238827991@163.com' or mobile = 'zb18238827991@163.com' ) LIMIT 1   [ RunTime:0.0022s ]
+
+[ 2015-04-28T09:45:10+08:00 ] ::1 /zhao/Home/User/chk.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002481s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005195s ]
+SQL: SHOW COLUMNS FROM `zh_user` [ RunTime:0.0366s ]
+SQL: SELECT * FROM `zh_user` WHERE ( email = 'zb18238827991@163.com' or mobile = 'zb18238827991@163.com' ) LIMIT 1   [ RunTime:0.0026s ]
+
+[ 2015-04-28T09:51:06+08:00 ] ::1 /zhao/Home/User/chk.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005047s ]
+SQL: SHOW COLUMNS FROM `zh_user` [ RunTime:0.0405s ]
+SQL: SELECT * FROM `zh_user` WHERE ( email = '18238827991' or mobile = '18238827991' ) LIMIT 1   [ RunTime:0.0028s ]
+
+[ 2015-04-28T09:51:13+08:00 ] ::1 /zhao/Home/User/test.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002602s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002409s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002657s ]
+
+[ 2015-04-28T09:55:28+08:00 ] ::1 /zhao/Home/User/chk.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006752s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010212s ]
+SQL: SHOW COLUMNS FROM `zh_user` [ RunTime:0.0373s ]
+SQL: SELECT * FROM `zh_user` WHERE ( email = '18238827991' or mobile = '18238827991' ) LIMIT 1   [ RunTime:0.0026s ]
+
+[ 2015-04-28T09:55:37+08:00 ] ::1 /zhao/Home/User/test.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002573s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001971s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002231s ]
+
+[ 2015-04-28T13:47:42+08:00 ] ::1 /zhao/Home/User/chk.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005702s ]
+SQL: SHOW COLUMNS FROM `zh_user` [ RunTime:0.0396s ]
+SQL: SELECT * FROM `zh_user` WHERE ( email = 'zb18238827991@126.com' or mobile = 'zb18238827991@126.com' ) LIMIT 1   [ RunTime:0.0025s ]
+
+[ 2015-04-28T13:56:55+08:00 ] ::1 /zhao/Home/User/User/index
+ERR: 非法操作:User
+
+[ 2015-04-28T13:57:14+08:00 ] ::1 /zhao/Home/User/User/index
+ERR: 非法操作:User
+
+[ 2015-04-28T14:19:16+08:00 ] ::1 /zhao/Home/User/chk.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006053s ]
+SQL: SHOW COLUMNS FROM `zh_user` [ RunTime:0.0352s ]
+SQL: SELECT * FROM `zh_user` WHERE ( email = '18238827991' or mobile = '18238827991' ) LIMIT 1   [ RunTime:0.0029s ]
+
+[ 2015-04-28T14:20:57+08:00 ] ::1 /zhao/Home/User/chk.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004896s ]
+SQL: SHOW COLUMNS FROM `zh_user` [ RunTime:0.0338s ]
+SQL: SELECT * FROM `zh_user` WHERE ( email = 'zb18238827991@126.com' or mobile = 'zb18238827991@126.com' ) LIMIT 1   [ RunTime:0.0029s ]
+

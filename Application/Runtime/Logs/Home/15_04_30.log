@@ -1,0 +1,14 @@
+[ 2015-04-30T08:21:14+08:00 ] ::1 /zhao/Home/User/chk.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000856s ]
+SQL: SHOW COLUMNS FROM `zh_user` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `zh_user` WHERE ( email = 'zb18238827991@163.com' or mobile = 'zb18238827991@163.com' ) LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2015-04-30T08:21:48+08:00 ] ::1 /zhao/Home/User/chk.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000924s ]
+SQL: SHOW COLUMNS FROM `zh_user` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `zh_user` WHERE ( email = 'web_zhaobei@163.com' or mobile = 'web_zhaobei@163.com' ) LIMIT 1   [ RunTime:0.0007s ]
+
